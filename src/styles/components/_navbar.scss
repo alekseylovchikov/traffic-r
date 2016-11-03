@@ -1,0 +1,118 @@
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #37474F;
+  padding: 8px 0 8px 19px;
+  position: fixed;
+  z-index: 1;
+
+  &--switch-menu {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 215px;
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        a.navbar-active {
+          color: #fff;
+          position: relative;
+          &:after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 48px;
+            content: "";
+            border-bottom: 3px solid #019fb6;
+          }
+          &:hover {
+            color: #fff;
+          }
+        }
+        a {
+          padding: 18px 0;
+          margin: 0 12px;
+          display: inline-block;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 14px;
+          color: #8E8E8E;
+          letter-spacing: 1px;
+          &:hover {
+            color: #00E5FF;
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    position: absolute;
+    height: 22px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .icon--logo {
+      width: 23px;
+      height: 23px;
+    }
+
+    .icon--logo-text {
+      height: 20px;
+      width: 103px;
+    }
+
+    #logo-image {
+      margin-right: 8px;
+    }
+
+    #logo-text {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: .8px;
+    }
+  }
+
+  #logout {
+    text-decoration: none;
+    display: inline-block;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 36px;
+    position: absolute;
+    height: 17px;
+    width: 20px;
+    .icon--logout {
+      width: 100%;
+      height: 100%;
+      fill: #959DA1;
+      &:hover {
+        fill: #F3F3F3;
+      }
+    }
+  }
+
+  #navbar-amount {
+    position: absolute;
+    top: 50%;
+    right: 82px;
+    transform: translate(0, -50%);
+    color: #05a0b3;
+    text-decoration: none;
+    font-size: 22px;
+    &:hover {
+      color: #00E5FF;
+    }
+  }
+}

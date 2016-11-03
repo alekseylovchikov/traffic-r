@@ -1,0 +1,44 @@
+$bg: #404056;
+
+.scrollarea-content {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollarea {
+  position: relative;
+  overflow: hidden;
+
+  .scrollbar-container {
+
+    &.vertical {
+      width: 6px;
+      height: 100%;
+      right: 0;
+      top: 0;
+
+      .scrollbar {
+        opacity: 0;
+        background: $bg;
+        border-radius: 3px;
+        transition: opacity .5s ease;
+      }
+    }
+
+    position: absolute;
+    background: none;
+    z-index: 9999;
+
+    transition: all .4s;
+  }
+
+  &:hover {
+    .scrollbar-container {
+      .scrollbar {
+        opacity: 1;
+      }
+    }
+  }
+}

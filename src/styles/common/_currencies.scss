@@ -1,0 +1,15 @@
+.currency {
+
+  &::before, &::after {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+
+  &--usd {
+    &::before {
+      content: '$';
+      margin-right: .2em;
+    }
+  }
+}

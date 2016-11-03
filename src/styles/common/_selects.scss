@@ -1,0 +1,124 @@
+$option_text    : #cec4ef;
+$option_bg      : #292941;
+$hover_bg       : #2d2d47;
+$arrow_bg       : #434363;
+$label_text     : rgba(#9e9ec4, 0.5);
+$label_opt_text : rgba(#9e9ec4, 0.5);
+
+.select {
+  margin-top: 6px;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  letter-spacing: normal;
+
+  &__current {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    color: $option_text;
+    background: $option_bg;
+    height: 35px;
+    padding: 3px 8px 0 8px;
+    border-radius: 2px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include arrow(9px, 6px, $arrow_bg, 5px, 3px, $option_bg, bottom, true, 1px, 10px);
+
+    &--clicked {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &--label {
+      color: $label_text;
+
+      & > span {
+        margin-left: 4px;
+        font-style: italic;
+        color: $label_opt_text;
+      }
+    }
+  }
+
+  &__options {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $option_bg;
+    border-radius: 2px;
+
+    &--opened {
+      display: flex;
+      flex-direction: column;
+      z-index: 5;
+    }
+  }
+
+  &__scroll {
+    max-height: 230px;
+    position: relative;
+    animation: open .5s ease;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    color: $option_text;
+    height: 35px;
+    padding: 3px 8px 0 8px;
+
+    &:hover {
+      cursor: pointer;
+      background: $hover_bg;
+    }
+
+    &:first-child {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    &--selected:not(&--label) {
+      opacity: 0.2;
+
+      &:hover {
+        cursor: default;
+        background: transparent;
+      }
+    }
+
+    &--label {
+      margin-bottom: 10px;
+      color: $label_text;
+
+      & > span {
+        margin-left: 4px;
+        font-style: italic;
+        color: $label_opt_text;
+      }
+    }
+  }
+}
+
+@keyframes open {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 230px;
+  }
+}

@@ -1,0 +1,13 @@
+frontend:
+  build: .
+  ports:
+    - 8086:5005
+  environment:
+    QUOTE_SERVICE_HOST: ec2-52-31-16-74.eu-west-1.compute.amazonaws.com
+    QUOTE_SERVICE_PORT: 9001
+    BID_SERVICE_HOST: ec2-52-16-146-230.eu-west-1.compute.amazonaws.com
+    BID_SERVICE_PORT: 8030
+    TRADE_HISTORY_SERVICE_HOST: ec2-52-16-146-230.eu-west-1.compute.amazonaws.com
+    TRADE_HISTORY_SERVICE_PORT: 8031
+    BALANCE_SERVICE_HOST: 162.251.110.196
+    BALANCE_SERVICE_PORT: 8040

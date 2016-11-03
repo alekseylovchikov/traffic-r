@@ -1,0 +1,89 @@
+@mixin close($size, $color, $colorHover) {
+  & {
+    position: absolute;
+
+    &::before {
+      content: '+';
+      display: block;
+      font-size: $size;
+      font-weight: 300;
+      padding: 5px;
+      color: $color;
+      transform: rotate(45deg);
+      transition: color .3s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::before {
+        color: $colorHover;
+      }
+    }
+  }
+}
+
+@mixin arrowToBottom($width, $height, $background) {
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $height $width/2 0 $width/2;
+    border-color: $background transparent transparent transparent;
+  }
+}
+
+// width1 is for bigger arrow, width 2 is for smaller one
+@mixin arrow($width1, $height1, $color1, $width2, $height2, $color2, $direction: bottom, $centered: false, $top: false, $right: false, $reversedOnHover: true) {
+  & {
+    position: relative;
+  }
+
+  &:before, &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+
+    @if $centered {
+      top: calc(50% - #{$height1/2 - $top});
+    }
+  }
+
+  &:before {
+    @if $direction == bottom {
+      border-width: $height1 $width1/2 0 $width1/2;
+      border-color: $color1 transparent transparent transparent;
+    }
+    @else if $direction == top {
+      border-width: 0 $width1/2 $height1 $width1/2;
+      border-color: transparent transparent $color1 transparent;
+    }
+
+    @if $right {
+      right: $right;
+    }
+  }
+
+  &:after {
+    @if $direction == bottom {
+      border-width: $height2 $width2/2 0 $width2/2;
+      border-color: $color2 transparent transparent transparent;
+    }
+    @else if $direction == top {
+      border-width: 0 $width2/2 $height2 $width2/2;
+      border-color: transparent transparent $color2 transparent;
+    }
+
+    @if $direction == top {
+      top: calc(50% - #{floor($height1/2)} + #{$height1 - $height2});
+    }
+
+    @if $right {
+      right: $right + ($width1 - $width2)/2;
+    }
+  }
+}

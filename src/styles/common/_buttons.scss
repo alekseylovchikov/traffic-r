@@ -1,0 +1,65 @@
+$text      : #fff;
+
+$green_bg  : #8BC34A;
+$purple_bg : #7986CB;
+$grey_bg   : #9B9B9B;
+$filter_bg : #00ACC1;
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  color: $text;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  letter-spacing: .5px;
+  margin-right: 14px;
+
+  &.add {
+    background-color: $purple_bg;
+    padding: 10px 12.17px;
+    &:hover {
+      background-color: #685BA8;
+    }
+  }
+
+  &.success {
+    background-color: $green_bg;
+  }
+
+  &.filter {
+    background: $filter_bg;
+    text-transform: lowercase;
+    font-size: 1.1em;
+    font-weight: 300;
+    //padding: 0 15px;
+  }
+
+  &.filters {
+    background: #EFEFEF;
+    color: #4A4A4A;
+    font-size: 13px;
+    text-transform: none;
+    margin-right: 8px;
+    font-style: italic;
+    font-weight: 400;
+    padding: 7.5px 11.6px;
+    &:hover {
+      color: #00ACC1;
+      .btn-icon {
+        color: #00ACC1;
+      }
+    }
+    .btn-icon {
+      color: #9B9B9B;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

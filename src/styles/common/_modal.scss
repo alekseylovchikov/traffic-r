@@ -1,0 +1,209 @@
+$modal_bg               : #202034;
+$modal_title_text       : #fff;
+$modal_info_text        : #fff;
+$modal_label_text       : rgba(#9e9ec4, 0.5);
+$modal_label_opt_text   : rgba(#9e9ec4, 0.5);
+$modal_input_text       : #cec4ef;
+$modal_input_bg         : #292941;
+$modal_endsin_text      : #fff;
+$modal_countdown_text   : #1ca87c;
+$modal_close_text       : #5b5b71;
+$modal_close_hover_text : #fff;
+
+.blur {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  z-index: 5000;
+}
+
+.modal {
+  background-color: $modal_bg;
+  border-radius: 5px;
+
+  &__content {
+    &--gift {
+      width: 600px;
+      padding: 50px 47px 72px 47px;
+      position: relative;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 70px;
+    color: $modal_title_text;
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    color: $modal_info_text;
+  }
+
+  &__bonus {
+    width: 100%;
+    max-width: 246px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  &__line {
+
+    &--1 {
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 31px;
+      letter-spacing: 1px;
+    }
+
+    &--2 {
+      font-weight: bold;
+      font-size: 98px;
+      line-height: 84px;
+
+      & > span {
+        font-size: 18px;
+        line-height: 18px;
+        display: inline-block;
+        margin-left: -2px;
+      }
+    }
+
+    &--3 {
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: normal;
+      text-transform: none;
+    }
+
+    &--4 {
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__fields {
+    width: 100%;
+    max-width: 246px;
+  }
+
+  &__preform {
+    line-height: 24px;
+  }
+
+  &__form {
+
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: 16px;
+
+    &:first-child {
+      margin-top: 18px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    color: $modal_label_text;
+
+    & > span {
+      font-style: italic;
+      color: $modal_label_opt_text;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 35px;
+    padding: 10px 9px 8px 9px;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    color: $modal_input_text;
+    background: $modal_input_bg;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 246px;
+  }
+
+  &__counter {
+    width: 100%;
+    max-width: 246px;
+  }
+
+  &__endsin {
+    color: $modal_endsin_text;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__countdown {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 54px;
+    line-height: 54px;
+    font-weight: 600;
+    color: $modal_countdown_text;
+    text-align: center;
+
+    &--soon {
+      animation: countdown 1s infinite;
+    }
+  }
+
+  &__close {
+    @include close(30px, $modal_close_text, $modal_close_hover_text);
+
+    top: 4px;
+    right: 2px;
+  }
+}
+
+@keyframes countdown {
+  to {
+    color: transparent;
+  }
+}

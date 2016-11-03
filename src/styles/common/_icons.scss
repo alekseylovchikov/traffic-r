@@ -1,0 +1,162 @@
+$logo          : #06a87b;
+$name          : #fff;
+$tournament    : #316760;
+$notifications : #606078;
+$usermenu      : #3f3f5d;
+
+$zoom          : #9191de;
+$zoom_hover    : lighten($zoom, 20%);
+
+$trade         : #fff;
+
+$sound         : #606078;
+$phone         : #fff;
+$email         : #fff;
+
+$modal         : #1d2e3b;
+
+.icon--add-site {
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+}
+
+.btn-icon {
+  display: inline-block;
+  float: right;
+  margin-left: 8px;
+  .filters--shape {
+    width: 9px;
+    height: 5px;
+    vertical-align: middle;
+  }
+}
+
+.table-icon {
+  display: inline-block;
+  margin-left: 4px;
+  .icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+
+  .icon--filter {
+    width: 10px;
+    height: 10px;
+  }
+
+  .icon--profile {
+    // empty
+  }
+
+  .icon--statistics {
+    fill: #9B9B9B;
+  }
+
+  &--logo {
+    width: 34px;
+    height: 34px;
+    fill: $logo;
+
+    &-big {
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  &--name {
+    width: 139px;
+    height: 24px;
+    margin: 0 0 0 13px;
+    fill: $name;
+  }
+
+  &--tournament {
+    width: 30px;
+    height: 26px;
+    margin: 0 12px 0 0;
+    fill: $tournament;
+  }
+
+  &--notifications {
+    width: 14px;
+    height: 17px;
+    fill: $notifications;
+  }
+
+  &--usermenu {
+    width: 25px;
+    height: 25px;
+    fill: $usermenu;
+    margin: -5px 6px -7px -5px;
+  }
+
+  &--zoom {
+    width: 22px;
+    height: 22px;
+    fill: $zoom;
+    transition: fill .5s ease;
+
+    &:hover {
+      fill: $zoom_hover;
+    }
+
+    &-disabled {
+      opacity: 0.3;
+    }
+  }
+
+  &--trade-call, &--trade-put {
+    width: 22px;
+    height: 14px;
+    fill: $trade;
+    margin: 0 10px 0 0;
+  }
+
+  &--sound-off, &--sound-on {
+    width: 16px;
+    height: 16px;
+    fill: $sound;
+  }
+
+  &--sound-on {
+
+  }
+
+  &--phone {
+    width: 13px;
+    height: 13px;
+    fill: $phone;
+    margin: 1px 7px 0 0;
+  }
+
+  &--email {
+    width: 15px;
+    height: 11px;
+    margin: 0 7px -1px 0;
+    fill: $email;
+  }
+
+  &--modal-gift {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 65px 0px 30px;
+    fill: $modal;
+  }
+
+  &--loading {
+    margin: 5px 0;
+  }
+}

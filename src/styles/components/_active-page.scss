@@ -1,6 +1,6 @@
 .active-page {
   margin-left: 210px;
-  padding-top: 91px;
+  padding-top: 75px;
 
   &--header {
     width: 100%;
@@ -44,7 +44,11 @@
   }
 
   &--container {
-    // padding: 0 34px;
+    // empty style
+  }
+
+  .padding {
+    padding: 0 34px;
   }
 
   &--content {
@@ -55,8 +59,12 @@
     font-size: 36px;
     font-weight: 400;
     color: #4A4A4A;
-    text-transform: capitalize;
     display: inline;
     padding-left: 34px;
+    &--small {
+      color: #00ACC1;
+      font-weight: 400;
+      font-size: .75em;
+    }
   }
 }

@@ -1,9 +1,10 @@
 $text      : #fff;
 
-$green_bg  : #8BC34A;
+$green_bg  : #4CAF50;
 $purple_bg : #7986CB;
 $grey_bg   : #9B9B9B;
 $filter_bg : #00ACC1;
+$add_bg    : #3F51B5;
 
 .btn {
   display: inline-block;
@@ -11,7 +12,7 @@ $filter_bg : #00ACC1;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   color: $text;
   cursor: pointer;
   outline: none;
@@ -20,15 +21,37 @@ $filter_bg : #00ACC1;
   margin-right: 14px;
 
   &.add {
-    background-color: $purple_bg;
+    background: $purple_bg;
     padding: 10px 12.17px;
+    .btn-icon {
+      float: left;
+      margin-right: 4px;
+      margin-left: 0;
+    }
     &:hover {
       background-color: #685BA8;
     }
   }
 
+  &.prove {
+    background: $add_bg;
+    padding: 10px 12px;
+    display: inline-block;
+    margin-left: 12px;
+  }
+
   &.success {
+    padding: 10px 16px;
     background-color: $green_bg;
+  }
+
+  &.cancel {
+    background: none;
+    padding: 10px 12px;
+    color: $grey_bg;
+    &:hover {
+      background: #efefef;
+    }
   }
 
   &.filter {
@@ -36,7 +59,9 @@ $filter_bg : #00ACC1;
     text-transform: lowercase;
     font-size: 1.1em;
     font-weight: 300;
-    //padding: 0 15px;
+    .btn-icon {
+      float: right;
+    }
   }
 
   &.filters {
@@ -48,6 +73,9 @@ $filter_bg : #00ACC1;
     font-style: italic;
     font-weight: 400;
     padding: 7.5px 11.6px;
+    .btn-icon {
+      float: right;
+    }
     &:hover {
       color: #00ACC1;
       .btn-icon {

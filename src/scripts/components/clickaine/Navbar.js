@@ -54,8 +54,8 @@ export default class Navbar extends Component {
         </span>
         <nav className="navbar--switch-menu">
           <ul>
-            <li><Link to="/publisher/dashboard" activeClassName="navbar-active" onClick={this.switchToggleMenu.bind(this, 'publisher')}>{'Publisher'}</Link></li>
-            <li><Link to="/advertiser/advertiser_1" activeClassName="navbar-active" onClick={this.switchToggleMenu.bind(this, 'advertiser')}>{'Advertiser'}</Link></li>
+            <li><Link to="/publisher" activeClassName="navbar-active" onClick={this.switchToggleMenu.bind(this, 'publisher')}>{'Publisher'}</Link></li>
+            <li><Link to="/advertiser" activeClassName="navbar-active" onClick={this.switchToggleMenu.bind(this, 'advertiser')}>{'Advertiser'}</Link></li>
           </ul>
         </nav>
         <span className="navbar-right">

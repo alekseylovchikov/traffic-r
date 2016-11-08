@@ -118,14 +118,14 @@ export default class StatisticsPage extends Component {
     return (
       <div className="active-page--container">
         <header className="active-page--header">
-          <h1 className="active-page--title">{'statistics'}</h1>
+          <h1 className="active-page--title">{'Statistics'}</h1>
           <Button
             className="btn filter"
             title="by site"
             icon={<SvgIcon imageID="svgicon__filters--shape" className="filters--shape" />}
           />
           <a className="active-page--header--filter" href="#">{'Last week: 21 October, 2016 - 28 October, 2016'}</a>
-          <Link to="/publisher/sites/create"><Button className="btn add" title="add site" /></Link>
+          <Link to="/publisher/sites/create"><Button className="btn add" icon={<SvgIcon imageID="svgicon__button--add" className="add-site" />} title="add site" /></Link>
         </header>
         <section className="active-page--filters">
           <Button
@@ -169,18 +169,19 @@ export default class StatisticsPage extends Component {
             <tbody>
               <TableItem />
               <tr>
-                <td><Link>{'optionarium.com'}</Link> <span onClick={this.toggleInfo.bind(this, 'optionarium')} className="active-page--content--table--zones">{'6 sites'} <span className="btn-icon">{renderShape()}</span></span></td>
+                <td><Link className="site-link" to={`/publisher/sites/${2}/update`}>{'optionarium.com'}</Link> <span onClick={this.toggleInfo.bind(this, 'optionarium')} className="active-page--content--table--zones">{'6 sites'} <span className="btn-icon">{renderShape()}</span></span></td>
                 <td>{'1,292,732'}</td>
                 <td>{'105,645'}</td>
                 <td>{'$0.051'}</td>
                 <td>{'$0.31'}</td>
                 <td>{'$6,133.15'}</td>
               </tr>
+              {/* show and hide SubTableItem */}
               { optionarium.showInfo ? optionariumSites.map(el => {
                 return <SubTableItem key={el.id} {...el} />;
               }) : null }
               <tr>
-                <td><Link>{'xxxxxtrafff.com'}</Link> <span className="active-page--content--table--zones">{'8 zones'} <span className="btn-icon"><SvgIcon imageID="svgicon__filters--shape" className="filters--shape" /></span></span></td>
+                <td><Link className="site-link" to={`/publisher/sites/${1}/update`}>{'xxxxxtrafff.com'}</Link> <span className="active-page--content--table--zones">{'8 zones'} <span className="btn-icon"><SvgIcon imageID="svgicon__filters--shape" className="filters--shape" /></span></span></td>
                 <td>{'1,292,732'}</td>
                 <td>{'105,645'}</td>
                 <td>{'$0.051'}</td>
@@ -188,7 +189,7 @@ export default class StatisticsPage extends Component {
                 <td>{'$6,133.15'}</td>
               </tr>
               <tr className="disable-table-item">
-                <td><Link>{'optionarium.com'}</Link> <span className="table-icon"><SvgIcon imageID="svgicon__table--notification" className="" /></span></td>
+                <td><Link className="site-link" to={`/publisher/sites/${3}/update`}>{'optionarium.com'}</Link> <span className="table-icon"><SvgIcon imageID="svgicon__table--notification" className="" /></span></td>
                 <td>{'1,292,732'}</td>
                 <td>{'105,645'}</td>
                 <td>{'$0.051'}</td>
@@ -196,7 +197,7 @@ export default class StatisticsPage extends Component {
                 <td>{'$6,133.15'}</td>
               </tr>
               <tr className="disable-table-item">
-                <td><Link>{'supermegatraffic.com'}</Link> <span className="table-icon"><SvgIcon imageID="svgicon__table--check" className="" /></span></td>
+                <td><Link className="site-link" to={`/publisher/sites/${4}/update`}>{'supermegatraffic.com'}</Link> <span className="table-icon"><SvgIcon imageID="svgicon__table--check" className="" /></span></td>
                 <td>{'1,292,732'}</td>
                 <td>{'105,645'}</td>
                 <td>{'$0.051'}</td>

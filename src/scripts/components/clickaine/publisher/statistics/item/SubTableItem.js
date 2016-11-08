@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class SubTableItem extends React.Component {
   static propTypes = {
@@ -16,7 +17,7 @@ export default class SubTableItem extends React.Component {
     const { name, hits, earnings, displays, cpm, cpc } = this.props;
     return (
       <tr className="sub-table-item">
-        <td><span>{name}</span></td>
+        <td><span><Link className="site-link" to="/publisher/sites/1/zones/9/update">{name}</Link></span></td>
         <td><span>{displays}</span></td>
         <td><span>{hits}</span></td>
         <td><span>{cpm}</span></td>

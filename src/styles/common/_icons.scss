@@ -24,12 +24,14 @@ $modal         : #1d2e3b;
 
 .btn-icon {
   display: inline-block;
-  float: right;
   margin-left: 8px;
   .filters--shape {
     width: 9px;
     height: 5px;
     vertical-align: middle;
+  }
+  .add-site {
+    margin-top: 1px;
   }
 }
 

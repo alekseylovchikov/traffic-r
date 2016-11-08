@@ -49,7 +49,10 @@
       border-bottom: 1px solid #EAE9E9;
       padding-right: 15px;
       font-weight: 300;
-
+      .site-link {
+        color: #00ACC1;
+        text-decoration: none;
+      }
       &:first-child {
         text-align: left;
         padding-right: 0;
@@ -99,7 +102,6 @@
 
   .total-table-item {
     td {
-      padding-top: 35px;
       border-bottom: none;
       background: #fff;
       font-weight: 500;
